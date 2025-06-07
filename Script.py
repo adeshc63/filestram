@@ -4,7 +4,7 @@ class script(object):
 Add me to your channel to instantly generate links for any downloadable media. Once received, I will automatically attach appropriate buttons to the post containing the URL.</i>\n\n<blockquote><a href=https://t.me/{}?startchannel&admin=post_messages+edit_messages+delete_messages>➜ 𝖠𝖽𝖽 𝖳𝗈 𝖢𝗁𝖺𝗇𝗇𝖾𝗅</a></blockquote>"""
 
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ biddu !
 
 📅 Dᴀᴛᴇ : <code>{}</code>
 ⏰ Tɪᴍᴇ : <code>{}</code>
@@ -56,8 +56,8 @@ Cʜᴀɴɴᴇʟ Uꜱᴀɢᴇ:
 🔞 ᴀᴅᴜʟᴛ ᴄᴏɴᴛᴇɴᴛ sᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ.
 
 📮 Hᴇʟᴘ & Sᴜᴘᴘᴏʀᴛ:
-• Uᴘᴅᴀᴛᴇꜱ: @AV_BOTz_UPDATE
-• Sᴜᴘᴘᴏʀᴛ: @AV_SUPPORT_GROUP
+• Uᴘᴅᴀᴛᴇꜱ: @marvaldoom
+• Sᴜᴘᴘᴏʀᴛ: @marvaldoom
 
  <u><i>ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴛᴏ  <a href='https://t.me/marvaldoom'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></u></i></b>"""
 
@@ -101,11 +101,9 @@ Nᴀᴍᴇ - {}"""
 
 <b>📥 Download : </b> <code>{}</code>
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE 🤡</b>"""
+<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE </b>"""
 
- #Dont Remove My Credit @AV_BOTz_UPDATE 
-#This Repo Is By @BOT_OWNER26 
-# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
+ 
     
     CAPTION2_TXT = """
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
@@ -119,8 +117,5 @@ Nᴀᴍᴇ - {}"""
 <b>📥 Download : </b> <code>{}</code>
 
 <b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE 🤡</b>"""
-    
-#Dont Remove My Credit @AV_BOTz_UPDATE 
-#This Repo Is By @BOT_OWNER26 
-# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
+
     
