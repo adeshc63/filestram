@@ -1,79 +1,77 @@
 import re
-from os import environ, getenv
+import os
+from os import environ
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 id_pattern = re.compile(r'^.\d+$')
 
-# Modified by @marvaldoom
+#Dont Remove My Credit @AV_BOTz_UPDATE 
+#This Repo Is By @BOT_OWNER26 
+# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
 
 # Bot information
-SESSION = environ.get('SESSION', 'WebMarvalDoom')
-API_ID = int(environ.get('API_ID', '25928682'))
-API_HASH = environ.get('API_HASH', '65b01e4ef42f8b3a1d5fd988e5aee5c9')
-BOT_TOKEN = environ.get('BOT_TOKEN', "1587356098:AAFoXvkUzi3_O116zyr4L9R8tQ0w54joG54")
-BOT_USERNAME = environ.get("BOT_USERNAME", 'Adsh4_bot') # without @ 
+SESSION = os.getenv('SESSION')
+API_ID = int(os.getenv('API_ID'))
+API_HASH = os.getenv('API_HASH')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_USERNAME = os.getenv("BOT_USERNAME")
 
 # Admins, Channels & Users
-BIN_CHANNEL = int(environ.get("BIN_CHANNEL", '-1002141063405')) # admin your channel in stream 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", '-1002141063405')) # admin your channel in users log 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '821243884').split()] # 3567788, 678899, 5889467
-OWNER_USERNAME = environ.get("OWNER_USERNAME", 'BOT_OWNER26') # without @ 
+BIN_CHANNEL = int(os.getenv("BIN_CHANNEL"))
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in os.getenv('ADMINS', '').split()]
+OWNER_USERNAME = os.getenv("OWNER_USERNAME")
 
 # pics information
-PICS = environ.get('PICS', 'https://envs.sh/_pM.jpg')
+PICS = os.getenv('PICS')
 
 # channel link information
-CHANNEL = environ.get('CHANNEL', 'https://t.me/marvaldoom')
-SUPPORT = environ.get('SUPPORT', 'https://t.me/marvaldoom')
-
-# Modified by @marvaldoom
+CHANNEL = os.getenv('CHANNEL')
+SUPPORT = os.getenv('SUPPORT')
 
 # file limit information
-ENABLE_LIMIT = environ.get("ENABLE_LIMIT", False) # True and False
-RATE_LIMIT_TIMEOUT = int(environ.get("RATE_LIMIT_TIMEOUT", "600"))  # limit time 600 = 10 minutes 
-MAX_FILES = int(environ.get("MAX_FILES", "10"))  # file limit 10 file Olay
-
-# Modified by @marvaldoom
+ENABLE_LIMIT = os.getenv("ENABLE_LIMIT", 'False').lower() == 'true'
+RATE_LIMIT_TIMEOUT = int(os.getenv("RATE_LIMIT_TIMEOUT", "600"))
+MAX_FILES = int(os.getenv("MAX_FILES", "10"))
 
 # ban information
-BANNED_CHANNELS = [int(banned_channels) if id_pattern.search(banned_channels) else banned_channels for banned_channels in environ.get('BANNED_CHANNELS', '').split()]   
-BAN_CHNL = [int(ban_chal) if id_pattern.search(ban_chal) else ban_chal for ban_chal in environ.get('BAN_CHNL', '').split()]
-BAN_ALERT = environ.get('BAN_ALERT' , '<b>ʏᴏᴜʀ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.ᴄᴏɴᴛᴀᴄᴛ [ᴄʜᴀᴛ ᴏᴡɴᴇʀ](https://telegram.me/AV_SUPPORT_GROUP) ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇ!!</b>')
+BANNED_CHANNELS = [int(banned_channels) if id_pattern.search(banned_channels) else banned_channels for banned_channels in os.getenv('BANNED_CHANNELS', '').split()]   
+BAN_CHNL = [int(ban_chal) if id_pattern.search(ban_chal) else ban_chal for ban_chal in os.getenv('BAN_CHNL', '').split()]
+BAN_ALERT = os.getenv('BAN_ALERT', '<b>ʏᴏᴜʀ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.ᴄᴏɴᴛᴀᴄᴛ [ᴀᴠ ᴄʜᴀᴛ ᴏᴡɴᴇʀ](https://telegram.me/marvaldoom) ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇ!!</b>')
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Lodu12:Lodu12@doremon.reqbb.mongodb.net/")
-DATABASE_NAME = environ.get('DATABASE_NAME', "FileStream")
+DATABASE_URI = os.getenv('DATABASE_URI')
+DATABASE_NAME = os.getenv('DATABASE_NAME')
 
-# fsub  information
-AUTH_PICS = environ.get('AUTH_PICS', 'https://envs.sh/AwV.jpg')              
-AUTH_CHANNEL = (environ.get("AUTH_CHANNEL", "-1002141063405"))
-FSUB = environ.get("FSUB", True)
+# fsub information
+AUTH_PICS = os.getenv('AUTH_PICS')
+AUTH_CHANNEL = os.getenv("AUTH_CHANNEL")
+FSUB = os.getenv("FSUB", 'True').lower() == 'true'
 
 # port information
-PORT = int(getenv('PORT', '2626'))
-NO_PORT = bool(getenv('NO_PORT', False))
-
-# Modified by @marvaldoom
+PORT = int(os.getenv('PORT', '2626'))
+NO_PORT = os.getenv('NO_PORT', 'False').lower() == 'true'
 
 # time information
-PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
+PING_INTERVAL = int(os.getenv("PING_INTERVAL", "1200"))
+SLEEP_THRESHOLD = int(os.getenv('SLEEP_THRESHOLD', '60'))
 
 # Online Stream and Download
-BIND_ADDRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-WORKERS = int(getenv('WORKERS', '4'))
+BIND_ADDRESS = str(os.getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+WORKERS = int(os.getenv('WORKERS', '4'))
 MULTI_CLIENT = False
-name = str(environ.get('name', 'marvaldoom'))
+name = str(os.getenv('name', 'avbotz'))
 APP_NAME = None
+
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = str(getenv('APP_NAME')) #dont need to fill anything here
+    APP_NAME = str(os.getenv('APP_NAME'))
 else:
     ON_HEROKU = False
-FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
-HAS_SSL=bool(getenv('HAS_SSL',False))
-if HAS_SSL:
-    URL = "https://ideal-thomasin-adeshc63-9dae396e.koyeb.app/".format(FQDN)
-else:
-    URL = "https://ideal-thomasin-adeshc63-9dae396e.koyeb.app/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
-      
-# Modified by @marvaldoom
+
+FQDN = str(os.getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or os.getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
+HAS_SSL = os.getenv('HAS_SSL', 'False').lower() == 'true'
+URL = os.getenv('URL')
